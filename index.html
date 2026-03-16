@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aryni Puspita | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Aryni.</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1 id="typing"></h1>
+
+<p>
+Information Systems Student at UPN "Veteran" Yogyakarta who is deeply interested in
+Artificial Intelligence, Blockchain Technology, and Digital Innovation.
+Currently developing skills in Python, AI tools, and Web3 while actively
+building impactful digital solutions.
+</p>
+
+<div class="hero-buttons">
+<a href="#projects" class="btn">View Projects</a>
+<a href="#contact" class="btn-outline">Contact Me</a>
+</div>
+
+</div>
+
+<div class="hero-img">
+<img src="aryni.jpeg">
+</div>
+
+</section>
+
+
+<section class="stats">
+
+<a href="https://www.tiktok.com/@2neseadew?_r=1&_t=ZS-94juEIrcL9m" target="_blank" class="card">
+<h2>10K+</h2>
+<p>TikTok Likes</p>
+<span>@2neseadeww</span>
+</a>
+
+<a href="https://www.instagram.com/arynipuspita25" target="_blank" class="card">
+<h2>1K+</h2>
+<p>Instagram Followers</p>
+<span>@arynipuspita25</span>
+</a>
+
+<a href="https://www.linkedin.com/in/aryni-puspita-dewi-samudra-57082431a" target="_blank" class="card">
+<h2>100+</h2>
+<p>LinkedIn Connections</p>
+</a>
+
+<div class="card">
+<h2>SIC</h2>
+<p>Samsung Innovation Campus</p>
+<span>Batch 7 - Python</span>
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am an Information Systems student from the Faculty of Industrial Engineering,
+UPN "Veteran" Yogyakarta. I have a strong passion for emerging technologies,
+especially Artificial Intelligence and Blockchain.
+
+I enjoy exploring innovative technologies and building digital solutions
+that combine creativity, logic, and problem solving.
+My long-term goal is to contribute to the development of AI-driven
+and decentralized technology ecosystems.
+</p>
+
+</section>
+
+
+
+<section id="skills">
+
+<h2>Tech Stack</h2>
+
+<div class="skills-grid">
+
+<div class="skill">
+<h3>Python</h3>
+<p>Samsung Innovation Campus</p>
+</div>
+
+<div class="skill">
+<h3>Artificial Intelligence</h3>
+<p>AI Tools & Automation</p>
+</div>
+
+<div class="skill">
+<h3>Blockchain / Web3</h3>
+<p>Blockchain Fundamentals</p>
+</div>
+
+<div class="skill">
+<h3>Figma</h3>
+<p>UI/UX & Prototype</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<h3>Campus Parking App Prototype</h3>
+
+<p>
+Designed a prototype system to help students find parking spaces efficiently.
+Built using Figma with user flow and UI design for campus parking management.
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>Social Media Manager – Wedding Organizer</h3>
+
+<p>
+Managing Instagram content strategy for wedding decoration business
+@ekorinidekorasi. Responsible for audience engagement,
+content planning, and digital branding.
+</p>
+
+<a href="https://www.instagram.com/ekorinidekorasi" target="_blank">Visit Instagram</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="certifications">
+
+<h2>Certifications</h2>
+
+<ul>
+
+<li>Samsung Innovation Campus Batch 7 – Python</li>
+
+<li>Artificial Intelligence – MySkill</li>
+
+<li>Web3 & Blockchain Technology – MySkill</li>
+
+</ul>
+
+</section>
+
+
+
+<section class="softskills">
+
+<h2>Soft Skills</h2>
+
+<div class="soft-grid">
+
+<div>Communication</div>
+<div>Discipline</div>
+<div>Fast Learner</div>
+<div>Adaptability</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Let's Connect</h2>
+
+<p>Open for AI innovation, tech collaboration, and digital projects.</p>
+
+<p>Email : samudraryni@gmail.com</p>
+
+</section>
+
+
+
+<script>
+
+const text = "Hello, I'm Aryni — Information Systems Student passionate about Artificial Intelligence and Blockchain Technology.";
+
+let i = 0;
+
+function typing(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typing,40);
+
+}
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
