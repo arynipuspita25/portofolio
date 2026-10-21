@@ -10,12 +10,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a href="#top" class="logo">Aryni<span>.</span></a>
+    <a href="#top" class="logo">Aryni Puspita<span>.</span></a>
     <nav>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -29,25 +30,19 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">Information Systems Student · UPN "Veteran" Yogyakarta</p>
-        <h1>Aryni Puspita Dewi Samudra</h1>
-        <p class="lead">
-          Information Systems student focused on Artificial Intelligence, Blockchain, and digital systems.
-          I build web applications and prototypes that combine clear logic with user-centered design.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Contact Me</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="aryni.jpeg" alt="Aryni Puspita Dewi Samudra">
-      </div>
-    </div>
-  </section>
+ <section class="hero-stage">
+  <p class="hero-script">Portofolio</p>
+  <h1 class="hero-title">Aryni</h1>
+
+  <div class="hero-figure">
+    <img class="hero-photo" src="aryni.png" alt="Aryni Puspita Dewi Samudra">
+  </div>
+
+  <div class="hero-bottom">
+    <p class="hero-year">2026</p>
+    <p class="hero-meta">Information System<br>Student</p>
+  </div>
+</section>
 
   <!-- HIGHLIGHTS -->
   <section class="highlights">
@@ -59,7 +54,7 @@
         <strong>1K+</strong><span>Instagram Followers</span>
       </a>
       <a href="https://www.linkedin.com/in/aryni-puspita-dewi-samudra-57082431a" target="_blank" rel="noopener" class="stat">
-        <strong>100+</strong><span>LinkedIn Connections</span>
+        <strong>200+</strong><span>LinkedIn Connections</span>
       </a>
       <div class="stat">
         <strong>SIC</strong><span>Samsung Innovation Campus, Batch 7</span>
@@ -326,6 +321,13 @@
   modal.addEventListener('click', e => {
     if (e.target === modal) modal.close();
   });
+  
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const p = max > 0 ? (window.scrollY / max) * 100 : 0;
+    document.documentElement.style.setProperty('--sy', p.toFixed(2));
+  }, { passive: true });
+
 </script>
 
 </html>
