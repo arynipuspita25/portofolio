@@ -518,13 +518,13 @@ a.stat:hover {
 
 /* Modal */
 .cert-modal {
-  position: relative;
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--line);
   padding: 28px;
   width: min(960px, 92vw);
   max-height: 92vh;
+  overflow: auto;
   text-align: center;
 }
 
@@ -561,7 +561,6 @@ a.stat:hover {
 .cert-close:hover {
   color: var(--cyan);
 }
-
 /* ---------- Contact ---------- */
 .contact {
   text-align: left;
