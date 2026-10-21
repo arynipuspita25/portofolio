@@ -47,12 +47,9 @@ body {
 }
 
 /* Latar gradasi biru ke pink pucat, tetap di belakang dan bergeser saat scroll */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
   background:
     radial-gradient(ellipse 70% 60% at 100% 0%, #020622 0%, #020622 25%, rgba(2, 6, 34, 0) 70%),
     radial-gradient(ellipse 50% 50% at 100% 55%, #0b1550 0%, rgba(11, 21, 80, 0) 70%),
@@ -60,6 +57,10 @@ body::before {
     radial-gradient(ellipse 45% 40% at 35% 80%, #9d86d6 0%, rgba(157, 134, 214, 0) 70%),
     radial-gradient(ellipse 50% 45% at 0% 100%, #f7e9f2 0%, rgba(247, 233, 242, 0) 70%),
     #2a3fb0;
+}
+
+body {
+  background: transparent;
 }
 /* Grain halus di seluruh halaman */
 body::after {
@@ -844,5 +845,11 @@ footer {
 
   .cert-item {
     flex: 0 0 75vw;
+  }
+}
+@media (max-width: 900px) {
+  body::after {
+    mix-blend-mode: normal;
+    opacity: 0.08;
   }
 }
