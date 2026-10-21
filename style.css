@@ -795,7 +795,37 @@ footer {
       #2a3fb0;
   }
 }
+@media (max-width: 900px) {
+  .highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .item > * {
+    min-width: 0;
+  }
+
+  .cert-item {
+    flex: 0 0 260px;
+  }
+}
 /* =========================================================
    RESPONSIVE: HP (max 640px)
    ========================================================= */
@@ -817,29 +847,66 @@ footer {
     font-size: 11px;
   }
 
-  .hero-stage {
+    .hero-stage {
     min-height: 100svh;
+    display: flex;
+    flex-direction: column;
     overflow: visible;
+   
   }
 
   .hero-script {
-    top: 40px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    order: 1;
+    padding-top: 12px;
+    font-size: 40px;
+    z-index: 3;
   }
 
   .hero-title {
-    top: 110px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    order: 2;
+    margin-top: 4px;
     font-size: 22vw;
+    z-index: 1;
   }
 
   .hero-figure {
-    align-items: flex-start;
-    padding-top: 26vh;
+    position: relative;
+    inset: auto;
+    order: 3;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -14vh;
+    min-height: 0;
+    z-index: 2;
   }
 
   .hero-photo {
-    height: 74vh;
-    -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+    height: 62svh;
+    width: auto;
+    max-width: 92vw;
+    animation: none;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+  }
+
+  .hero-bottom {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    order: 4;
+    padding: 16px 20px calc(16px + env(safe-area-inset-bottom, 0px));
   }
 
   .hero-meta,
@@ -862,5 +929,58 @@ footer {
 
   .cert-item {
     flex: 0 0 75vw;
+  }
+}
+    .site-header {
+    padding-top: env(safe-area-inset-top, 0px);
+    background: rgba(2, 6, 34, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  /* =========================================================
+   FIX MOBILE (khusus HP, max 640px)
+   ========================================================= */
+@media (max-width: 640px) {
+
+  /* HEADER: naik sampai dynamic island, logo sejajar dengan island */
+  .site-header {
+    padding-top: 0;
+  }
+
+  .nav-wrap {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0 0 12px;
+    gap: 0;
+  }
+
+  .nav-wrap .logo {
+    width: 100%;
+    height: max(env(safe-area-inset-top, 0px), 24px);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-wrap nav {
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* HERO: foto naik menutupi sebagian ARYNI, tidak ada celah kosong */
+  .hero-stage {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .hero-figure {
+    flex: none;
+    margin-top: -23vh;   /* makin kecil (lebih negatif) = foto makin naik */
+  }
+
+  .hero-photo {
+    height: 62svh;
   }
 }
